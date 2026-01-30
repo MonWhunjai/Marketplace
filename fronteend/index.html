@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+ 
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>dApp Marketplace</title>
+</head>
+ 
+<body>
+  <div id="root"></div>
+ 
+  <h1>dApp Marketplace</h1>
+  <button onclick="connectWallet()">Connect Wallet</button>
+  <p>Account: <span id="account"></span></p>
+ 
+  <h3>Add product</h3>
+  <input placeholder="Product Name">
+  <input placeholder="Price">
+ 
+  <button>Add</button>
+ 
+  <hr>
+  <h3>Product</h3>
+ 
+</body>
+<script src="app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/ethers@6.8.1/dist/ethers.umd.min.js"></script>
+ 
+</html>
+ 
