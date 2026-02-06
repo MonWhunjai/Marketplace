@@ -16,17 +16,18 @@
   <p>Account: <span id="account"></span></p>
  
   <h3>Add product</h3>
-  <input placeholder="Product Name">
-  <input placeholder="Price">
+  <input id="name" placeholder="Product Name">
+  <input id="price" placeholder="Price (ETH)">
  
-  <button>Add</button>
+  <button onclick="addProduct()">Add</button>
  
   <hr>
-  <h3>Product</h3>
+  <h3>Products</h3>
+  <button onclick="loadProducts()">Load Products</button>
+  <div id="products"></div>
  
 </body>
 <script src="app.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/ethers@6.8.1/dist/ethers.umd.min.js"></script>
  
 </html>
- 
