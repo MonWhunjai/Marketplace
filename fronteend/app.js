@@ -1,5 +1,5 @@
-const CONTRACT_ADDRESS = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
- 
+const CONTRACT_ADDRESS = "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9";
+
 const CONTRACT_ABI = [
   {
     "inputs": [
@@ -59,31 +59,30 @@ const CONTRACT_ABI = [
     "type": "function"
   }
 ];
- 
+
 async function connectWallet() {
   if (!window.ethereum) {
     alert("Please install MetaMask");
     return;
   }
- 
+
   const accounts = await window.ethereum.request({
     method: "eth_requestAccounts",
   });
- 
+
   account = accounts[0];
   document.getElementById("account").innerText = account;
- 
+
   // Added the missing 's'
   const provider = new ethers.BrowserProvider(window.ethereum);
   const signer = await provider.getSigner();
- 
-  market =new ethers.Contract(
+
+  market = new ethers.Contract(
     CONTRACT_ADDRESS, CONTRACT_ABI, signer
   );
- 
+
   console.log("Connected account:", account);
   console.log("Contract loaded:", market);
 }
- 
- 
- 
+
+
