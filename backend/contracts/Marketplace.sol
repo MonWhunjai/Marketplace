@@ -70,4 +70,13 @@ contract Marketplace {
 
         emit ProductRemoved(id);
     }
+
+    function getAllProducts() public view returns (Product[] memory){
+        Product[] memory items = new Product[](nextId);
+
+        for(uint i = 0; i < nextId; i++){
+            items[i-1] = products[i];
+        }
+        return items;
+    }
 }
